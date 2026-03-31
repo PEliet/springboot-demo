@@ -94,10 +94,6 @@ public class UserController {
 
 注：**`@Bean` 是 Spring 框架提供的注解，用于在配置类中显式声明一个 Bean**，告诉 Spring 容器该方法返回的对象需要被管理。**
 
-5.@Component
-
-
-
 
 
 五.数据库添加字段
@@ -108,15 +104,4 @@ public class UserController {
     @TableField("update_time")//内部值表示这个属性映射数据库的哪个字段
     private LocalDateTime updateTime;
 }
-```
-
-@JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss")//改时间格式的
-
-```java
-@TableField(value="create_time" , fill= FieldFill.INSERT)//解决数据库字段与开发名称不一致的情况
-@JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss")//改时间格式的
-private LocalDateTime createTime;
-@TableField(value="update_time" , fill= FieldFill.UPDATE)//内部值表示这个属性映射数据库的哪个字段
-@JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss")
-private LocalDateTime updateTime;
 ```
