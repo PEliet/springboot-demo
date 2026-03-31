@@ -105,3 +105,15 @@ public class UserController {
     private LocalDateTime updateTime;
 }
 ```
+
+```java
+@JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss")//改时间格式的
+
+private LocalDateTime createTime;
+@TableField(value="update_time" , fill= FieldFill.UPDATE)//内部值表示这个属性映射数据库的哪个字段
+@JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss")
+
+private LocalDateTime updateTime;
+```
+
+@JsonFormat修改输出内容的格式
